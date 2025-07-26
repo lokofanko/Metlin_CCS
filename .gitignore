@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# IDE specific
+.vscode/
+.idea/
+
+# Data files (DO NOT COMMIT)
+data/
+
+# Trained models (DO NOT COMMIT)
+models/
+
+# Tensorboard logs (DO NOT COMMIT)
+runs/
+
+# OS specific files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,32 @@
+# ===================================================================
+# Конфигурация для обучения модели предсказания CCS
+# ===================================================================
+
+# --- Параметры данных ---
+data:
+  dir: 'data/raw' # Директория с исходными CSV файлами
+  main: 'data_main_stand.csv'
+  external_train: 'data_external_stand.csv'
+  test1: 'external_test_set1_stand.csv'
+  test2: 'external_test_set2_stand.csv'
+  tanimoto: 'tanimoto_spec.csv'
+
+# --- Параметры обучения ---
+training:
+  output_dir: 'models'     # Куда сохранять модели и логи
+  epochs: 75
+  batch_size: 32
+  lr: 0.0001               # Learning rate
+  use_tanimoto: true       # Использовать веса Tanimoto (true/false)
+
+# --- Параметры модели ---
+model:
+  num_graph_features: 79   # Размерность фичей атома (будет определена автоматически, но можно задать)
+  num_cat_features: 3      # Размерность one-hot аддукта (будет определена автоматически)
+  hidden_dim: 128
+  fc_hidden_dim: 600
+  dropout: 0.05
+
+# --- Параметры логирования ---
+logging:
+  log_dir: 'runs'          # Директория для логов TensorBoard

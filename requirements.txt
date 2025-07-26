@@ -1,0 +1,8 @@
+pandas
+scikit-learn
+torch
+torch_geometric
+rdkit-pypi
+tqdm
+pyyaml
+tensorboard
